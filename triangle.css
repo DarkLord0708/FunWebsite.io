@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    font-family: "kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    /* background-color: rgb(17, 17, 17); */
+    background: linear-gradient(90deg,rgb(59, 20, 81),rgb(77, 25, 25));
+    color: #b9f7ff;
+}
+
+
+#Title {
+    color: #ffd650;
+    text-decoration: underline;
+}
+
+#ps{
+    color: #ff5050;
+}
+
+#p1{
+    color: #4dbeff;
+}
+
+#p2{
+    color:#8361ff
+}
+
+#p3{
+    color: #ff608a;
+}
+
+#p4{
+    color: #52ff8e;
+}
+
+#p5{
+    color: #ff95fa;
+}
+
+
+
+
+.Images{
+    display: flex;
+    justify-content: center;
+}
+
+#picture{
+    border: 4mm ridge rgba(32, 93, 198, 0.6);
+}
+
+.formula{
+    font-size: 25px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #2E382E;
+    font-weight: 800;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+ 
+}
+
+#active{
+    background-color: #f2bac9;
+    padding: 5px 5px 0px 5px;
+    border-radius: 5px;
+    border-style:dashed;
+}
+
+#inactive:hover{
+    background-color: #ADBDFF;
+    padding: 5px 5px 0px 5px;
+    border-radius: 5px;
+
+}
+
+#separator{
+    font-weight: 800;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.navbar{
+    position: fixed;
+    width: 100vw;
+
+    background-color: #9883E5;
+    border-radius: 5px;
+    border-style: ridge;
+    border-color: black;
+}
+
+footer{
+    font-weight: bold;
+    text-align: center;
+    position: static;
+    background-color: #ffd650;
+    height: 50px;
+}

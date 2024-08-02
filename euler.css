@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    /* background-color: #F9DEC9; #F4EBE8; */
+    background: linear-gradient(90deg,rgb(230, 255, 119),rgb(255, 129, 129));
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal; 
+    /* color: #6A3E37; */
+    /* color: #3A405A; */
+    /* color: #713110; */
+    /* color: #e40f61;                              
+    color:#e60800; */
+    color: #b50000;
+}
+
+#Title {
+    /* color: #883616; */
+    color: #a70101;
+    text-decoration: underline;
+}
+
+.Images{
+    display: flex;
+    justify-content: center;
+}
+
+#picture{
+    border: 4mm ridge rgba(200, 87, 31, 0.6);
+}
+
+.formula{
+    font-size: 25px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #2E382E;
+    font-weight: 800;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+ 
+}
+
+#active{
+    background-color:#f2bac9;/*#D3FFF3;*/ /*#f2bac9;*/
+    padding: 5px 5px 0px 5px;
+    border-radius: 5px;
+    border-style:dashed;
+}
+
+#inactive:hover{
+    background-color: /*#FCD3DE;*//*#D3FFF3;*/ #ADBDFF;
+    padding: 5px 5px 0px 5px;
+    border-radius: 5px;
+    /* border-style:dashed; */
+}
+
+#separator{
+    font-weight: 800;
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.navbar{
+    position: fixed;
+    width: 100vw;
+
+    background-color: #9883E5;/*#AFBBF2;*/
+    border-radius: 5px;
+    border-style: ridge;
+    border-color: black;
+}
+
+footer{
+    background-color: #650000;
+    color: aliceblue;
+    position:static;
+    font-weight: bold;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
