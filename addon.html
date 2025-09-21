@@ -1,73 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Download</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="try.css">
-
-    <style>
-        /* Simple CSS to make the download link look like a button */
-        .download-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 20px;
-            font-family: 'Black Ops One', cursive; /* Using a font from your project */
-            color: white;
-            background-color: #5c67f2;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-
-        .download-btn:hover {
-            background-color: #4a54c2;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Download</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="addon.css">
 </head>
-
 <body>
-    <div class="navbar">
-        &nbsp;
-        <a class="navlink" href="index.html" id="inactive"><font size="5">Home</font></a>
-        &nbsp;
-        <font id="separator">|</font>
-        &nbsp;
-        <a class="navlink" href="euler.html" id="inactive"><font size="5">Nerdy_Maths</font></a>
-        &nbsp;
-        <font id="separator">|</font>
-        &nbsp;
-        <a class="navlink" href="triangle.html" id="inactive"><font size="5">Less_Nerdy_Maths</font></a>
-        &nbsp;
-        <font id="separator">|</font>
-        &nbsp;
-        <a class="navlink" href="try.html" id="inactive"><font size="5">Something_Interesting</font></a>
-        &nbsp;
-        <font id="separator">|</font>
-        &nbsp;
-        <a class="navlink" href="video.html" id="active"><font size="5">Video_Download</font></a>
-    </div>
+  <div class="navbar">
+    &nbsp;
+    <a class="navlink" href="index.html" id="inactive"><font size="5">Home</font></a>
+    &nbsp;<font id="separator">|</font>&nbsp;
+    <a class="navlink" href="euler.html" id="inactive"><font size="5">Nerdy_Maths</font></a>
+    &nbsp;<font id="separator">|</font>&nbsp;
+    <a class="navlink" href="triangle.html" id="inactive"><font size="5">Less_Nerdy_Maths</font></a>
+    &nbsp;<font id="separator">|</font>&nbsp;
+    <a class="navlink" href="try.html" id="inactive"><font size="5">Something_Interesting</font></a>
+    &nbsp;<font id="separator">|</font>&nbsp;
+    <a class="navlink" href="addon.html" id="active"><font size="5">A Surprise</font></a>
+  </div>
 
-    <div class="content">
-        <br><br><br>
-    
-        <center>
-            <font id="Title" align="center">Video Download Page</font>
-            <br><br><br><br>
-            <p id="text" style="font-size: 25px;">Click the button below to download the video.</p>
-            <br><br>
-            
-            <a href="path/to/your/video.mp4" download="CTF-Challenge-Video.mp4" class="download-btn">
-                Download Now 🎬
+  <div class="content">
+    <center>
+      <p id="Title">Unveil The Surprise</p>
+      <p id="text" style="font-size: 25px;">Enter the password to reveal what's hidden.</p>
+
+      <form id="passwordForm" class="password-boxes">
+        <input type="password" maxlength="1" class="digit-input" required>
+        <input type="password" maxlength="1" class="digit-input" required>
+        <input type="password" maxlength="1" class="digit-input" required>
+        <input type="password" maxlength="1" class="digit-input" required>
+        <input type="password" maxlength="1" class="digit-input" required>
+        <input type="password" maxlength="1" class="digit-input" required>
+        <button type="submit">Unlock</button>
+      </form>
+
+      <div id="downloadSection" style="display:none; margin-top:20px;">
+            <a href="https://drive.google.com/file/d/1uVvZH8R8RHQEbqLP1-iotfk5K3_TLcdm/view?usp=sharing" 
+            target="_blank" 
+            class="download-btn">
+            Download Now 🎬
             </a>
-        </center>
-    </div>
+      </div>
 
+
+  <script>
+    const form = document.getElementById("passwordForm");
+    const downloadSection = document.getElementById("downloadSection");
+    const correctPassword = "372631"; 
+
+    // auto-focus jumps to next box
+    document.querySelectorAll(".digit-input").forEach((input, idx, arr) => {
+      input.addEventListener("input", () => {
+        if (input.value && idx < arr.length - 1) {
+          arr[idx + 1].focus();
+        }
+      });
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const entered = Array.from(document.querySelectorAll(".digit-input"))
+        .map(input => input.value)
+        .join("");
+
+      if (entered === correctPassword) {
+        downloadSection.style.display = "block";
+        form.style.display = "none";
+      } else {
+        alert("Incorrect password!");
+        form.reset();
+        document.querySelector(".digit-input").focus();
+      }
+    });
+  </script>
 </body>
 </html>
