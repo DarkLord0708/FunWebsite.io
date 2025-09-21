@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Download</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="try.css">
+
+    <style>
+        /* Simple CSS to make the download link look like a button */
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-family: 'Black Ops One', cursive; /* Using a font from your project */
+            color: white;
+            background-color: #5c67f2;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #4a54c2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        &nbsp;
+        <a class="navlink" href="index.html" id="inactive"><font size="5">Home</font></a>
+        &nbsp;
+        <font id="separator">|</font>
+        &nbsp;
+        <a class="navlink" href="euler.html" id="inactive"><font size="5">Nerdy_Maths</font></a>
+        &nbsp;
+        <font id="separator">|</font>
+        &nbsp;
+        <a class="navlink" href="triangle.html" id="inactive"><font size="5">Less_Nerdy_Maths</font></a>
+        &nbsp;
+        <font id="separator">|</font>
+        &nbsp;
+        <a class="navlink" href="try.html" id="inactive"><font size="5">Something_Interesting</font></a>
+        &nbsp;
+        <font id="separator">|</font>
+        &nbsp;
+        <a class="navlink" href="video.html" id="active"><font size="5">Video_Download</font></a>
+    </div>
+
+    <div class="content">
+        <br><br><br>
+    
+        <center>
+            <font id="Title" align="center">Video Download Page</font>
+            <br><br><br><br>
+            <p id="text" style="font-size: 25px;">Click the button below to download the video.</p>
+            <br><br>
+            
+            <a href="path/to/your/video.mp4" download="CTF-Challenge-Video.mp4" class="download-btn">
+                Download Now 🎬
+            </a>
+        </center>
+    </div>
+
+</body>
+</html>
